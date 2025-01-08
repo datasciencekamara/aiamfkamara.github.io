@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
-	  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC7DE4QRDM"></script>
 <script>
@@ -71,9 +70,62 @@ radius:"70%",
 	}]
 });
 
-	chart.render();
+	
+
+
+	
+	chart.render()
+	var barchart = new CanvasJS.Chart("barchartContainer", {
+		backgroundColor:"transparent" ,
+   // "light1", "light2", "dark1"
+  animationEnabled: true,
+  //exportEnabled: true,
+  title: {
+    text: "Tools & Softwares"
+  },
+  axisX: {
+    margin: 10,
+    //labelPlacement: "inside",
+    tickPlacement: "inside"
+  },
+  axisY2: {
+    title: "Views (by years of experience)",
+    titleFontSize: 14,
+    suffix: " years"
+  },
+  data: [{
+    type: "bar",
+    axisYType: "secondary",
+    indexLabel: "{y}",
+    dataPoints: [
+  	
+      { label: "Gephi", y: 1 },
+      { label: "DSS dataiku", y: 1 },
+     
+      
+      { label: "Azure", y: 1 },
+      { label: "GCP", y: 1 },
+      { label: "Databricks", y: 1 },
+  	
+      { label: "Rapidminer", y: 1 },
+  	
+  	{ label: "Anaconda", y: 2 },
+  	{ label: "R studio", y: 3 },
+  	
+  	{ label: "Postgres SQL", y: 4 },
+  	
+      { label: "Jupyter notebook", y: 4 }
+      
+  	
+    ]
+  }]
+});	
+	barchart.render();
+	
 }
 </script>
+  	
+
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -319,8 +371,8 @@ radius:"70%",
                 <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                   <div class="u-container-layout u-valign-middle u-container-layout-2">
                     <h5 class="u-text u-text-default u-text-3">About Me</h5>
-                    <p class="u-custom-font u-heading-font u-text u-text-default u-text-4 " >With nearly 5 years of experience as full-time Data Scientist and Research Intern in both  Lille and Paris regions (2016-2020), I followed various trainings in the fields of Econometrics, Digital humanities, Computer Science and Big Data. I am now based in west Africa and I involve in several projects ranging from webscraping and network analysis to NLP. I also write articles about Artificial Neural Networks and Python programming.
-                      <br>Feel free to mail me at <a href="mailto: devpythonbigdata@outlook.com">@devpythonbigdata</a></p>
+                    <p class="u-custom-font u-heading-font u-text u-text-default u-text-4 " >With nearly 5 years of experience as full-time Data Scientist and Research Intern in both  Lille and Paris regions (2016-2020), I followed various trainings in the fields of Econometrics, Digital humanities, Computer Science and Big Data. I am currently based in west Africa where I involve in data science projects ranging from webscraping to network analysis and natural language processing. I also write articles about Artificial Neural Networks and Python programming.
+                      <br>Feel free to mail me at <a href="mailto: abdourahmane29@outlook.com">@abdourahmane29</a></p>
                   </div>
                 </div>
 
@@ -397,6 +449,7 @@ radius:"70%",
                      <li>Team mangement</li>
 
 <div id="chartContainer" style="height: 350px; width: 100%;"></div>
+                   	<div id="barchartContainer" style="height: 350px; width: 100%;"></div>
 
 </ul>
                   </div>
@@ -408,9 +461,9 @@ radius:"70%",
                    <ul>
   <li>Français</li>
 <li>English(fluent)</li>
-<li>Español(tengo nociones)</li>
- <li>Arabia</li>  
-</ul>
+<li>Español</li>
+ 
+                   	</ul>
                   </div>
 </div>
 
